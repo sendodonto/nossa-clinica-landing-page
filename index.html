@@ -26,14 +26,15 @@
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;overflow-x:clip;max-width:100%;}
   body{
     background:var(--white-warm);
     color:var(--ink);
     font-family:'Manrope',sans-serif;
     font-weight:400;
     line-height:1.6;
-    overflow-x:hidden;
+    overflow-x:clip;
+    max-width:100%;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.serif{
@@ -710,7 +711,12 @@
     .wrap{padding:0 24px;}
     .nav-links{display:none;}
     .burger{display:flex;}
-    header .hero-cta-row .btn-outline{display:none;}
+    header{padding:16px 0;}
+    header .wrap{gap:18px;justify-content:flex-start;}
+    header .logo{font-size:20px;white-space:nowrap;}
+    header .main-nav{margin-left:auto;gap:0;}
+    header .main-nav > .btn-outline{display:none!important;}
+    header .burger{flex:0 0 26px;}
     /* Mantém as três profissionais visíveis no mobile: a foto ocupa um painel
        próprio em proporção original, em vez de ser ampliada e cortada pelo cover. */
     .hero{
